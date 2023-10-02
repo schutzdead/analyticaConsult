@@ -28,7 +28,7 @@ export default function Footer () {
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>En savoir plus</h3>
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
                         <p>Dr. Bastien Dubuisson</p>
-                        <div className='flex gap-3'>
+                        <div className='flex gap-3 justify-center'>
                             <Image src={Facebook} alt="Pictogram Facebook"/>
                             <Image src={Instagram} alt="Pictogram Instagram"/>
                             <Link href="https://www.linkedin.com/in/lucas-soubry" target={"_blank"}>
