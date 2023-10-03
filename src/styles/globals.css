@@ -6,8 +6,21 @@
 
 @layer base {
   body {
-      color:theme('colors.black');
-      background-color:theme('backgroundColor.white')
+    color: theme('colors.black');
+    background-color:theme('backgroundColor.white');
+    @apply overflow-x-hidden;
+    @apply no-scrollbar;
   }
-  
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
 }

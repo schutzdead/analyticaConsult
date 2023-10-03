@@ -43,6 +43,7 @@ module.exports = {
       },
       height: {
         'fullwithHeader' : 'calc(100vh - 112px)',
+        'fullwithHeader2' : 'calc(100vh - 80px)',
       },
       minHeight: {
         'fullwithHeader' : 'calc(100vh - 112px)',
@@ -52,5 +53,7 @@ module.exports = {
       },
     },
     },
-  plugins: [],
+    plugins: [
+      require('tailwind-scrollbar'),
+    ],
 }
