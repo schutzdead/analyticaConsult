@@ -3,13 +3,9 @@ import Service2 from './assets/services/service2.webp'
 import Service3 from './assets/services/service3.webp'
 import Service4 from './assets/projects/project1.webp'
 
-
-
 export const services = [
     {
         "id":1,
-        "title":"Lorem1",
-        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis a laudantium in illum provident fuga tempora vero quos itaque iure.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis a laudantium in illum provident fuga tempora vero quos itaque iure.",
         "picture":Service1
     },
     {

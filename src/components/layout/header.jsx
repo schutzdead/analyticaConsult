@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../../../public/assets/header/logo1.svg'
+import Logo from '../../../public/assets/header/logo.png'
 // import Menu from '../../../public/assets/header/menu.svg'
 import { Hamburger } from './menu'
 import { lock, unlock } from '@/utils/lockScreen'
@@ -23,7 +23,6 @@ export default function Header ({isIntersecting}) {
           </div>
           <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
             <Image src={Logo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
-            <h1 className='text-2xl lg:text-xl text-center md:text-lg'>Analytica Consult</h1> 
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>
             <ul className='flex gap-10 font-semibold tracking-wider font-Helvetica lg:gap-5'>

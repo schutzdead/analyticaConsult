@@ -8,7 +8,7 @@ import Menu from './menu'
 import { BlackHamburger } from './menu'
 
 
-export default function Headerlayout () {
+export default function HeaderTeam () {
   
   const [menu, setMenu] = useState(false)
   const [hamburger, setHamburger] = useState(false)
@@ -16,7 +16,7 @@ export default function Headerlayout () {
     return (
     <>
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
-      <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 border-b border-gray-300 text-red bg-white transition-all duration-300 lg:px-10 md:px-5 sm:h-24'>
+      <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 border-b border-black text-red bg-[#e7dfdb] transition-all duration-300 lg:px-10 md:px-5 sm:h-24'>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
             <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
@@ -44,8 +44,8 @@ export default function Headerlayout () {
                 </Link>
               </li>
               <Link href='/contact/'>
-                <li className='group w-[85px] flex items-center justify-center absolute text-primary right-0'>
-                  <button className='z-10 py-1.5 rounded w-full border border-primary/40 bg-white transition-all duration-500 relative bottom-1 right-1 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
+                <li className='group w-[85px] flex items-center justify-center absolute text-black right-0'>
+                  <button className='z-10 py-1.5 rounded w-full border border-primary/40 bg-[#e7dfdb] transition-all duration-500 relative bottom-1 right-1 group-hover:border-third group-hover:bg-[#e7dfdb] group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
                   <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
                 </li>
               </Link>

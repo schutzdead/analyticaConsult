@@ -17,7 +17,6 @@ export default function Home() {
   const swiperRef = useRef(null);  
   useEffect(() => {
     const swiperContainer = swiperRef.current;
-    console.log(swiperContainer);
     Object.assign(swiperContainer, swiperParams);
     swiperContainer.initialize();
   }, []);

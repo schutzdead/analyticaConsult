@@ -44,7 +44,7 @@ export default function Services() {
                             <p className='max-w-[70%] text-lg xl:text-base xl:max-w-[85%]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis saepe molestias, odio perspiciatis aperiam recusandae laboriosam autem necessitatibus vel. Eligendi!</p>
                         </div>
                         <div className='text-2xl font-light overflow-y-auto scrollbar-thumb-gray-300 scrollbar-thin pr-5 mt-24 mb-10'>
-                            {services?.map(service => <Service key={service.id} service={service} setIndex={setIndex} setCurrentSelect={setCurrentSelect} currentSelect={currentSelect} swiperRef={swiperRef} />)}
+                            {services?.slice(1,services.length).map(service => <Service key={service.id} service={service} setIndex={setIndex} setCurrentSelect={setCurrentSelect} currentSelect={currentSelect} swiperRef={swiperRef} />)}
                         </div>
                     </div>
                     <div className='relative w-[50%] h-full bg-gray-100 text-black lg:hidden'>

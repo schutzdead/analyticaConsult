@@ -29,9 +29,13 @@ export default function Footer () {
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
                         <p>Bastien Dubuisson, PhD</p>
                         <div className='flex gap-3 md:justify-center'>
-                            <Image src={Facebook} alt="Pictogram Facebook"/>
-                            <Image src={Instagram} alt="Pictogram Instagram"/>
-                            <Link href="https://www.linkedin.com/in/lucas-soubry" target={"_blank"}>
+                            <Link href="https://www.facebook.com/histoire.consult/" target={"_blank"}>
+                                <Image src={Facebook} alt="Pictogram Facebook"/>
+                            </Link>
+                            <Link href="https://www.instagram.com/histoireconsult/" target={"_blank"}>
+                                <Image src={Instagram} alt="Pictogram Instagram"/>
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/bastien-dubuisson/" target={"_blank"}>
                                 <Image src={Linkedin} alt="Pictogram Linkedin"/>
                             </Link>
                         </div>
