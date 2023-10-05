@@ -1,10 +1,9 @@
 import Image from 'next/image'
-import History from '../../public/assets/homepage/landscape1.webp'
 import Profil from '../../public/assets/homepage/profil.webp'
-import Swipe1 from '../../public/assets/homepage/swipe1.webp'
-import Swipe2 from '../../public/assets/homepage/swipe2.webp'
-import Swipe3 from '../../public/assets/homepage/swipe3.webp'
-import Swipe4 from '../../public/assets/homepage/swipe4.webp'
+import Swipe1 from '../../public/assets/services/service1.webp'
+import Swipe2 from '../../public/assets/services/service2.webp'
+import Swipe3 from '../../public/assets/services/service3.webp'
+import Swipe4 from '../../public/assets/projects/project1.webp'
 import Lock from '../../public/assets/homepage/lock.svg'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
@@ -44,10 +43,10 @@ export default function Home() {
     <>
       <Header isIntersecting={isIntersecting} />
         <main>
-          <section className='h-[100vh] -mt-28 overflow-hidden lg:flex lg:justify-center sm:-mt-24'>
-            <Image src={History} className='w-full h-full object-cover' alt='Landscape' priority={true}/>
-            <div className='w-full h-full bg-black/40 absolute top-0'></div>
-            <p className='absolute top-1/3 text-white font-bold text-7xl w-3/4 leading-snug tracking-wide ml-[20vw] xl:text-5xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl' >LOREM IPSUM DOOS<br/><span className='text-primary'>DOLOR SIT</span></p>
+          <section className='h-[100vh] -mt-24 overflow-hidden lg:flex lg:justify-center sm:-mt-24'>
+            <Image src={Swipe4} className='w-full h-full object-cover' alt='Landscape' priority={true}/>
+            <div className='w-full h-full bg-black/30 absolute top-0'></div>
+            <p className='absolute top-1/3 text-white font-bold text-7xl w-3/4 leading-snug tracking-wide ml-[20vw] xl:text-6xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl' >LOREM IPSUM DOOS<br/><span className='text-white'>DOLOR SIT</span></p>
           </section>
           <section className='py-24 w-full flex justify-center gap-16 lg:items-center lg:gap-8 sm:flex-col sm:py-12 sm:gap-12'>
             <div className='w-1/3 max-w-[400px] h-auto lg:w-[40%] md:w-[45%] sm:w-[45%] 2sm:w-[60%]'>
@@ -69,7 +68,7 @@ export default function Home() {
             <Icon image={Lock} text="Lorem ispum"/>
           </section>
           <section className='my-24 md:my-16'>
-            <swiper-container ref={swiperRef} init="false" class='h-full mx-10 lg:mx-20 sm:mx-5'> 
+            <swiper-container ref={swiperRef} init="false" class='h-full mx-10 sm:mx-5'> 
               <SlideImage image={Swipe1}/>
               <SlideImage image={Swipe2}/>
               <SlideImage image={Swipe3}/>
@@ -97,7 +96,7 @@ export function SlideImage ({image}) {
   return(
     <swiper-slide class="flex justify-center hover:scale-105 transition-all duration-500">
       <div className='relative overflow-hidden text-white'>
-        <Image src={image} alt='Article picture' className='max-h-[500px] object-cover sm:max-w-[400px] 2sm:max-h-[400px]' priority/>
+        <Image src={image} alt='Article picture' className='h-[500px] object-cover md:h-[400px] sm:max-w-[400px] 2sm:max-h-[400px]' height={2250} width={1500} priority/>
         <div className='z-10 w-full absolute bg-black/50 bottom-0 pb-10'
              style={{background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4990371148459384) 50%, rgba(255,255,255,0) 100%)'}}>
           <h2 className='font-bold px-10'>Lorem, ipsum dolor</h2>
@@ -112,7 +111,6 @@ const swiperParams = {
   slidesPerView: 3,
   pagination: true,
   spacebetween:20,
-  navigation:true,
   autoplay:{
     delay: 2500,
     disableOnInteraction: false,

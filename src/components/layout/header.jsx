@@ -16,8 +16,8 @@ export default function Header ({isIntersecting}) {
     return (
     <>
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
-      <header className='z-20 h-28 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-all duration-300 lg:px-10 sm:h-24 md:px-5'
-              style={isIntersecting ? {backgroundColor:'black'} : {backgroundColor:'transparent'}}>
+      <header className='z-20 h-24 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-[background-color] duration-300 lg:px-10 sm:h-24 md:px-5'
+              style={isIntersecting ? {backgroundColor:'white', color:'black', borderBottom:'solid 1px rgb(209,213,219)'} : {backgroundColor:'transparent'}}>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
             <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
@@ -46,7 +46,8 @@ export default function Header ({isIntersecting}) {
                 </Link>
               </li>
               <div className='group w-[85px] flex items-center justify-center absolute text-primary right-0'>
-                <button className='z-10 py-1.5 rounded w-full bg-white transition-all duration-300 relative bottom-1 right-1 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
+                <button className='z-10 py-1.5 rounded w-full bg-white transition-all duration-300 relative bottom-1 right-1 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'
+                style={isIntersecting ? {border:'rgba(106, 151, 249, 0.4) 1px solid'} : {border:'none'}}>Contact</button>
                 <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
               </div>
             </ul>

@@ -45,7 +45,7 @@ export default function Headerlayout () {
                 </Link>
               </li>
               <div className='group w-[85px] flex items-center justify-center absolute text-primary right-0'>
-                <button className='z-10 py-1.5 rounded w-full border border-primary/40 bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
+                <button className='z-10 py-1.5 rounded w-full border border-primary/40 bg-white transition-all duration-500 relative bottom-1 right-1 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
                 <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
               </div>
             </ul>
