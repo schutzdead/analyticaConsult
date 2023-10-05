@@ -20,19 +20,21 @@ export default function Menu ({menu, setMenu , setHamburger}) {
                             </Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                            <Link href='/account/'>
+                            <Link href='/projects/'>
                             <p>Projets</p>
                             </Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden group mt-1.5'>
-                            <Link href='/account/'>
+                            <Link href='/team/'>
                             <p>Equipe</p>
                             </Link>
                         </li>
-                        <div className='group w-[145px] flex items-center justify-center relative text-primary pt-3'>
-                            <button className='z-10 py-1.5 rounded w-full border border-primary bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
-                            <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
-                        </div>
+                        <Link href='/contact/'>
+                            <div className='group w-[145px] flex items-center justify-center relative text-primary pt-3'>
+                                <button className='z-10 py-1.5 rounded w-full border border-primary bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
+                                <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
+                            </div>
+                        </Link>
                     </ul>
                 </div>
             </menu>

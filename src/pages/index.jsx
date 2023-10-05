@@ -68,7 +68,7 @@ export default function Home() {
             <Icon image={Lock} text="Lorem ispum"/>
           </section>
           <section className='flex justify-center'>
-            <div className='mb-24 mt-32 max-w-[1500px] md:mb-16 md:mt-24'>
+            <div className='mb-24 mt-32 max-w-[1500px] w-[100vw] md:mb-16 md:mt-24'>
               <swiper-container ref={swiperRef} init="false" class='h-full mx-10 sm:mx-5'>
                 <SlideImage image={Swipe1}/>
                 <SlideImage image={Swipe2}/>
@@ -98,7 +98,7 @@ export function SlideImage ({image}) {
   return(
     <swiper-slide class="flex justify-center hover:scale-105 transition-all duration-500 rounded-2xl overflow-hidden">
       <div className='relative overflow-hidden text-white'>
-        <Image src={image} alt='Article picture' className='h-[500px] object-cover rounded-2xl overflow-hidden md:h-[400px] sm:max-w-[400px] 2sm:max-h-[400px]' height={2250} width={1500} />
+        <Image src={image} alt='Article picture' className='h-[500px] object-cover object-center rounded-2xl overflow-hidden md:h-[400px] sm:max-w-[400px] 2sm:max-h-[400px]' height={2250} width={1500} />
         <div className='z-10 w-full absolute bg-black/50 bottom-0 pb-10'
              style={{background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4990371148459384) 50%, rgba(255,255,255,0) 100%)'}}>
           <h2 className='font-bold px-10'>Lorem, ipsum dolor</h2>

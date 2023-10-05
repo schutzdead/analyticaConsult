@@ -40,7 +40,7 @@ export default function Header ({isIntersecting}) {
                 </Link>
               </li>
               <li className='cursor-pointer relative overflow-hidden group mt-1.5 mr-[95px]'>
-                <Link href='/account/'>
+                <Link href='/team/'>
                   <p>Equipe</p>
                   <UnderlineHover />
                 </Link>
