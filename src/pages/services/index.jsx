@@ -51,7 +51,7 @@ export default function Services() {
                         <swiper-container ref={swiperRef} class='w-full h-full object-cover rounded-3xl overflow-hidden'>
                             {services?.map(s => 
                             <swiper-slide key={s.id}>
-                                <Image src={s.picture} className='w-full h-full object-cover' width={667} height={1000} alt='Services picture'/>
+                                <Image src={s.picture} className='w-full h-full object-cover' width={1500} height={2250} alt='Services picture'/>
                             </swiper-slide>
                             )}
                         </swiper-container>
@@ -61,7 +61,7 @@ export default function Services() {
                             </div>
                             <div className='relative overflow-hidden rounded-b-3xl mx-[1px]'
                                  style={{background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(255,255,255,0) 100%)'}}>
-                                <div className='max-h-[200px] overflow-y-auto flex items-start my-10 px-20 z-10 xl:px-14'>
+                                <div className='max-h-[200px] overflow-y-auto scrollbar-thumb-gray-300 scrollbar-thin flex items-start my-10 pl-20 pr-10 mr-10 z-10 xl:px-14'>
                                     <p key={services[index].id} className='tracking-wide leading-7 relative animate-fromtoptotop lg:px-14 lg:pb-14'>{content}</p>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ export default function Services() {
                         <h1 className='text-7xl font-light pt-5 xl:text-5xl'>Lorem ipsum dolor sit.</h1>
                         <p className='text-lg xl:text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis saepe molestias, odio perspiciatis aperiam recusandae laboriosam autem necessitatibus vel. Eligendi!</p>
                     </div>
-                    <Image src={services[0].picture} className='max-h-[350px] object-cover rounded-3xl' width={667} height={1000} alt='Services picture'/>
+                    <Image src={services[0].picture} className='max-h-[350px] object-cover rounded-3xl' width={1500} height={2250} alt='Services picture'/>
                     <div className='w-full text-black mb-10'>
                         {services? 
                             services.map(service => <ServiceReponsive key={service.id} service={service}/>)
@@ -99,7 +99,7 @@ function Service({service, setIndex, setCurrentSelect, currentSelect, swiperRef}
 
     return(
         <div className='group border-y border-gray-300 py-5 flex justify-between cursor-pointer' 
-             onClick={() => {setIndex(service.id-1); setCurrentSelect(service.id); swiperRef.current.swiper.slideTo(service.id, 750, false)}}>
+             onClick={() => {setIndex(service.id-1); setCurrentSelect(service.id); swiperRef.current.swiper.slideTo(service.id-1, 750, false)}}>
             <h1>{service.title}</h1>
             <div className='relative flex items-center justify-center p-2 rounded-full overflow-hidden xl:p-1'
                  style={select ? {backgroundColor:'#6a97f9'} : {backgroundColor:'black', opacity:'0.7'}}>
