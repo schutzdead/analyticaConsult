@@ -6,7 +6,7 @@ import Linkedin from '../../../public/assets/footer/linkedin.svg'
 
 export default function Footer () {
     return (
-        <footer className="bg-[#f6f0ea] text-darkTypo-color pt-20 pb-5 flex flex-col gap-10 sm:pt-14 sm:gap-8">
+        <footer className="bg-white text-darkTypo-color pt-20 pb-5 flex flex-col gap-10 border-t border-gray-300 sm:pt-14 sm:gap-8">
             <div className='grid-cols-3 grid justify-items-center sm:grid-cols-1 sm:gap-8'>
                 <div>
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Navigation</h3>
@@ -27,7 +27,7 @@ export default function Footer () {
                 <div>
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>En savoir plus</h3>
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
-                        <p>Dr. Bastien Dubuisson</p>
+                        <p>Bastien Dubuisson, PhD</p>
                         <div className='flex gap-3 justify-center'>
                             <Image src={Facebook} alt="Pictogram Facebook"/>
                             <Image src={Instagram} alt="Pictogram Instagram"/>

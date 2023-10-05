@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Menu from './menu'
 
 
-export default function Header ({isIntersecting, color}) {
+export default function Header ({isIntersecting}) {
   
   const [menu, setMenu] = useState(false)
   const [hamburger, setHamburger] = useState(false)
@@ -16,7 +16,7 @@ export default function Header ({isIntersecting, color}) {
     return (
     <>
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
-      <header className={`z-20 h-28 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-all duration-300 lg:px-10 sm:h-24 md:px-5 ${color}`}
+      <header className='z-20 h-28 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-all duration-300 lg:px-10 sm:h-24 md:px-5'
               style={isIntersecting ? {backgroundColor:'black'} : {backgroundColor:'transparent'}}>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
             <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>

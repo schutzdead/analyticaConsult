@@ -16,7 +16,7 @@ export default function Headerlayout () {
     return (
     <>
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
-      <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 text-red bg-white transition-all duration-300 lg:px-10 md:px-5'>
+      <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 border-b border-gray-300 text-red bg-white transition-all duration-300 lg:px-10 md:px-5 sm:h-24'>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
             <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>

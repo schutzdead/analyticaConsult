@@ -21,6 +21,18 @@ module.exports = {
       'hxl': {'raw': '(max-height: 800px)'},
     },
     extend: {
+      animation: {
+        fromtoptotop:'fromtoptotop 1s ease-out forwards',
+      },
+      keyframes: {
+        fromtoptotop: {
+          '0%':{ top: "0%", opacity:1 },
+          '25%':{ opacity:0 },
+          '50%':{ top: "100%" },
+          '75%':{ opacity:0 },
+          '100%':{ top: "0%", opacity:1 },
+        },
+      },
       spacing: {
       },
       fontFamily: {
