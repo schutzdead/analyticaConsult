@@ -5,6 +5,8 @@ import { unlock } from "@/utils/lockScreen"
 import Close from '../../../public/assets/header/close.svg'
 
 export default function Menu ({menu, setMenu , setHamburger}) {
+    const closeBurger = () => {setHamburger(false);setMenu(false);unlock()}
+
     return (
         <>
             <div className="hidden fixed w-full h-full left-0 top-0 z-30 bg-black/60 cursor-pointer md:block"
@@ -13,33 +15,27 @@ export default function Menu ({menu, setMenu , setHamburger}) {
                 style={menu ? {left:0, transition:'left 400ms ease-out'} : {left:"-100%"}}>
                 <Image src={Close} onClick={() => {setMenu(false);unlock();setHamburger(false)}} alt="Close pictogram" className='w-8 cursor-pointer self-start'/>
                 <div className="flex justify-center">
-                    <ul className="relative flex flex-col items-center text-3xl font-bold tracking-wide w-full gap-10">
-                        <li className='cursor-pointer relative overflow-hidden mt-20 group'>
-                            <Link href='/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
-                            <p>Accueil</p>
+                    <ul className="relative flex flex-col items-center text-2xl tracking-wide w-full gap-6">
+                        <li className='cursor-pointer relative overflow-hidden mt-5 group' onClick={closeBurger}>
+                            <Link href='/'>Accueil</Link>
+                        </li>
+                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group' onClick={closeBurger}>
+                            <Link href='/services/'>Services</Link>
+                        </li>
+                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group' onClick={closeBurger}>
+                            <Link href='/projects/'>Projets</Link>
+                        </li>
+                        <li className='cursor-pointer relative overflow-hidden group mt-1.5' onClick={closeBurger}>
+                            <Link href='/team/'>Equipe</Link>
+                        </li>
+                        <li onClick={closeBurger}>
+                            <Link href='/contact/'>
+                                <div className='group w-[145px] flex items-center justify-center relative text-primary pt-3'>
+                                    <button className='z-10 py-1.5 rounded w-full border border-primary bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
+                                    <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
+                                </div>
                             </Link>
                         </li>
-                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                            <Link href='/services/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
-                            <p>Services</p>
-                            </Link>
-                        </li>
-                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                            <Link href='/projects/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
-                            <p>Projets</p>
-                            </Link>
-                        </li>
-                        <li className='cursor-pointer relative overflow-hidden group mt-1.5'>
-                            <Link href='/team/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
-                            <p>Equipe</p>
-                            </Link>
-                        </li>
-                        <Link href='/contact/'>
-                            <div className='group w-[145px] flex items-center justify-center relative text-primary pt-3'>
-                                <button className='z-10 py-1.5 rounded w-full border border-primary bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
-                                <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>
-                            </div>
-                        </Link>
                     </ul>
                 </div>
             </menu>
