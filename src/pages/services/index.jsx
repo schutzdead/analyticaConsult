@@ -35,8 +35,8 @@ export default function Services() {
 
     return (
         <Layout>
-            <main>
-            <section className='h-fullwithHeader2 w-full bg-white flex items-center justify-center lg:h-auto'>
+            <main className='flex flex-1 items-center justify-center'>
+            <section className='h-fullwithHeader2 w-full bg-white flex items-center justify-center max-w-[1800px] max-h-[1000px] lg:h-auto'>
                 <div className='h-[91%] w-[97%] bg-white rounded-3xl flex overflow-hidden lg:hidden'>
                     <div className='w-[50%] h-full bg-gray-100 p-8 flex flex-col justify-between'>
                         <div className='flex flex-col gap-6'>

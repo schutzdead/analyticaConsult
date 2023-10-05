@@ -7,11 +7,11 @@ import Layout from '@/components/layout/layout'
 export default function Services() {
     return (
         <Layout>
-            <main>
-                <section className='my-16 mx-20 md:mx-8 md:mb-8'>
+            <main className='flex flex-col mx-20 items-center flex-1 md:mx-8'>
+                <section className='mt-16 mb-10 mx-20 max-w-[1600px] w-full md:mx-8 md:mb-8'>
                     <MainCard />
                 </section>
-                <section className='grid grid-cols-3 gap-10 mx-20 my-16 lg:grid-cols-2 md:grid-cols-1 md:mx-8 md:gap-8 md:mt-8'>
+                <section className='grid grid-cols-3 gap-10 mx-20 my-10 max-w-[1600px] w-full lg:grid-cols-2 md:grid-cols-1 md:mx-8 md:gap-8 md:mt-8'>
                     <Card />
                     <Card />
                     <Card />
@@ -48,7 +48,7 @@ function Card () {
 
 function MainCard () {
     return (
-        <div className='relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis'>
+        <div className='relative h-[600px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis xl:h-[450px]'>
             <Image src={Project} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' priority/>
             <div className='h-full w-full absolute top-0' style={{background: 'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%)'}}></div>
                 <div className='w-full h-heightforCard absolute flex items-end pb-10 top-0 overflow-hidden md:h-full'>
