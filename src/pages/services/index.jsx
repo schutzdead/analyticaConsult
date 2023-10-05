@@ -51,7 +51,7 @@ export default function Services() {
                         <swiper-container ref={swiperRef} class='w-full h-full object-cover rounded-3xl overflow-hidden'>
                             {services?.map(s => 
                             <swiper-slide key={s.id}>
-                                <Image src={s.picture} className='w-full h-full object-cover' width={1500} height={2250} alt='Services picture'/>
+                                <Image src={s.picture} className='w-full h-full object-cover' width={1500} height={2250} alt='Services picture' priority/>
                             </swiper-slide>
                             )}
                         </swiper-container>
@@ -73,7 +73,7 @@ export default function Services() {
                         <h1 className='text-7xl font-light pt-5 xl:text-5xl'>Lorem ipsum dolor sit.</h1>
                         <p className='text-lg xl:text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis saepe molestias, odio perspiciatis aperiam recusandae laboriosam autem necessitatibus vel. Eligendi!</p>
                     </div>
-                    <Image src={services[0].picture} className='max-h-[350px] object-cover rounded-3xl' width={1500} height={2250} alt='Services picture'/>
+                    <Image src={services[0].picture} className='max-h-[350px] object-cover rounded-3xl' width={1500} height={2250} alt='Services picture' priority/>
                     <div className='w-full text-black mb-10'>
                         {services? 
                             services.map(service => <ServiceReponsive key={service.id} service={service}/>)
@@ -103,7 +103,7 @@ function Service({service, setIndex, setCurrentSelect, currentSelect, swiperRef}
             <h1>{service.title}</h1>
             <div className='relative flex items-center justify-center p-2 rounded-full overflow-hidden xl:p-1'
                  style={select ? {backgroundColor:'#6a97f9'} : {backgroundColor:'black', opacity:'0.7'}}>
-                <Image src={Arrow} className='z-10' alt='Arrow'/>
+                <Image src={Arrow} className='z-10' alt='Arrow' priority/>
                 <div className='absolute w-10 h-10 bg-primary rounded-full -left-[100%] transition-all duration-300 group group-hover:left-0 xl:h-8 xl:w-8'></div>
             </div>
         </div>
@@ -117,7 +117,7 @@ function ServiceReponsive ({service}) {
         <>
             <div className="flex justify-between items-center cursor-pointer pt-7 gap-5" onClick={() => {setOpen(!open)}}>
                 <h1>{service.title}</h1>
-                <Image src={Plus} className="w-4 h-auto transition-all duration-300" style={open ? {transform:'rotate(45deg)'} : {transform:'rotate(0deg)'}} alt='Logo' />
+                <Image src={Plus} className="w-4 h-auto transition-all duration-300" style={open ? {transform:'rotate(45deg)'} : {transform:'rotate(0deg)'}} alt='Logo' priority />
             </div>
             <ul className="flex items-start overflow-hidden mb-7"
                 style={open ? {maxHeight:'400px', transition:'all 1s'} : { maxHeight:0, transition:'all 1s 0s'}}>

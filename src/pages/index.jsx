@@ -86,7 +86,7 @@ export default function Home() {
 export function Icon ({image, text}) {
   return(
     <div className='flex flex-col items-center gap-4'>
-      <Image src={image} alt={text} className='w-8 h-auto' priority/>
+      <Image src={image} alt={text} className='w-8 h-auto'/>
       <p className='text-lg font-semibold md:text-base'>{text}</p>
     </div>
   )
@@ -96,7 +96,7 @@ export function SlideImage ({image}) {
   return(
     <swiper-slide class="flex justify-center hover:scale-105 transition-all duration-500">
       <div className='relative overflow-hidden text-white'>
-        <Image src={image} alt='Article picture' className='h-[500px] object-cover md:h-[400px] sm:max-w-[400px] 2sm:max-h-[400px]' height={2250} width={1500} priority/>
+        <Image src={image} alt='Article picture' className='h-[500px] object-cover md:h-[400px] sm:max-w-[400px] 2sm:max-h-[400px]' height={2250} width={1500} />
         <div className='z-10 w-full absolute bg-black/50 bottom-0 pb-10'
              style={{background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4990371148459384) 50%, rgba(255,255,255,0) 100%)'}}>
           <h2 className='font-bold px-10'>Lorem, ipsum dolor</h2>

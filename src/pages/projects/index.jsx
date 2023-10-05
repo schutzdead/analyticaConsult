@@ -27,7 +27,7 @@ export default function Services() {
 function Card () {
     return (
         <div className='group group/buttonBis relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden xl:h-[350px]'>
-            <Image src={ProjectAll} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={667} height={1000} alt='Services picture' />
+            <Image src={ProjectAll} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={667} height={1000} alt='Services picture' priority/>
             <h1 className='text-3xl text-white w-full font-bold absolute top-1/2 text-center z-10 -translate-y-1/2 xl:text-2xl'>Le Nouvel Horizon</h1>
             <div className='h-full w-full absolute top-0 bg-black/25'>
                 <div className='w-full h-full relative top-0 overflow-hidden flex items-end py-5'>
@@ -38,7 +38,7 @@ function Card () {
                             </div>
                             <p className='text-lg font-light text-gray-500 xl:text-base'>Découvrir mon projet</p>
                         </div>
-                        <Image src={Arrow} className='mx-2 relative left-0 group-hover/button:left-2 transition-all duration-300' alt='Services picture' />
+                        <Image src={Arrow} className='mx-2 relative left-0 group-hover/button:left-2 transition-all duration-300' alt='Services picture' priority/>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ function Card () {
 function MainCard () {
     return (
         <div className='relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis'>
-            <Image src={Project} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' />
+            <Image src={Project} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' priority/>
             <div className='h-full w-full absolute top-0' style={{background: 'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%)'}}></div>
                 <div className='w-full h-heightforCard absolute flex items-end pb-10 top-0 overflow-hidden md:h-full'>
                     <div className='bg-white group/button px-5 z-10 absolute overflow-hidden transition-all duration-700 bottom-0 left-1/2 -translate-x-1/2 flex items-center rounded-2xl translate-y-full group-hover/buttonBis:translate-y-0 md:-translate-y-0 md:w-[90%] md:relative md:justify-between'>
@@ -60,7 +60,7 @@ function MainCard () {
                             </div>
                             <p className='text-lg font-light text-gray-500 md:text-base'>Découvrir mon projet phare</p>
                         </div>
-                        <Image src={Arrow} className='mx-2 relative left-0 group-hover/button:left-2 transition-all duration-300' alt='Services picture' />
+                        <Image src={Arrow} className='mx-2 relative left-0 group-hover/button:left-2 transition-all duration-300' alt='Services picture' priority/>
                     </div>
                 </div>
         </div>
