@@ -33,10 +33,7 @@ export default function Services() {
       swiperContainer.initialize();
     }, []);
 
-    console.log(index);
-
     return (
-        <div>
         <Layout>
             <main>
             <section className='h-fullwithHeader2 w-full bg-white flex items-center justify-center lg:h-auto'>
@@ -87,7 +84,6 @@ export default function Services() {
             </section>
             </main>
         </Layout>
-        </div>
     )
 }
 

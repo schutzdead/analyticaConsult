@@ -56,6 +56,7 @@ module.exports = {
       height: {
         'fullwithHeader' : 'calc(100vh - 112px)',
         'fullwithHeader2' : 'calc(100vh - 80px)',
+        'heightforCard' : 'calc(50% + 50px)',
       },
       minHeight: {
         'fullwithHeader' : 'calc(100vh - 112px)',

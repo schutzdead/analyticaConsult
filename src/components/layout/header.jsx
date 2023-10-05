@@ -34,7 +34,7 @@ export default function Header ({isIntersecting}) {
                 </Link>
               </li>
               <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                <Link href='/account/'>
+                <Link href='/projects/'>
                   <p>Projets</p>
                   <UnderlineHover />
                 </Link>

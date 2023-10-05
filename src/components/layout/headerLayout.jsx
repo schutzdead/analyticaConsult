@@ -2,10 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../../../public/assets/header/logo1.svg'
 // import Menu from '../../../public/assets/header/menu.svg'
-import { Hamburger } from './menu'
 import { lock, unlock } from '@/utils/lockScreen'
 import { useState } from 'react'
 import Menu from './menu'
+import { BlackHamburger } from './menu'
 
 
 export default function Headerlayout () {
@@ -18,7 +18,7 @@ export default function Headerlayout () {
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
       <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 border-b border-gray-300 text-red bg-white transition-all duration-300 lg:px-10 md:px-5 sm:h-24'>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
-            <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
+            <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
           <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
             <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
@@ -33,7 +33,7 @@ export default function Headerlayout () {
                 </Link>
               </li>
               <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                <Link href='/account/'>
+                <Link href='/projects/'>
                   <p>Projets</p>
                   <UnderlineHover />
                 </Link>
