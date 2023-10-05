@@ -36,7 +36,7 @@ export default function Services() {
     return (
         <Layout>
             <main className='flex flex-1 items-center justify-center'>
-            <section className='h-fullwithHeader2 w-full bg-white flex items-center justify-center max-w-[1800px] max-h-[1000px] lg:h-auto'>
+            <section className='h-fullwithHeader2 w-full bg-white flex items-center justify-center max-w-[1800px] lg:h-auto'>
                 <div className='h-[91%] w-[97%] bg-white rounded-3xl flex overflow-hidden lg:hidden'>
                     <div className='w-[50%] h-full bg-gray-100 p-8 flex flex-col justify-between'>
                         <div className='flex flex-col gap-6'>
@@ -68,7 +68,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div className='bg-white hidden px-10 lg:flex lg:flex-col lg:gap-10 lg:items-center sm:px-7 sm:gap-7'>
+                <div className='bg-white hidden px-10 h-auto lg:flex lg:flex-col lg:gap-10 lg:items-center sm:px-7 sm:gap-7'>
                     <div className='flex flex-col gap-6 mt-10 sm:mt-5'>
                         <h1 className='text-7xl font-light pt-5 xl:text-5xl'>Lorem ipsum dolor sit.</h1>
                         <p className='text-lg xl:text-base'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis saepe molestias, odio perspiciatis aperiam recusandae laboriosam autem necessitatibus vel. Eligendi!</p>

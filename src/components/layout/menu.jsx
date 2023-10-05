@@ -15,17 +15,22 @@ export default function Menu ({menu, setMenu , setHamburger}) {
                 <div className="flex justify-center">
                     <ul className="relative flex flex-col items-center text-3xl font-bold tracking-wide w-full gap-10">
                         <li className='cursor-pointer relative overflow-hidden mt-20 group'>
-                            <Link href='/services/'>
+                            <Link href='/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
+                            <p>Accueil</p>
+                            </Link>
+                        </li>
+                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
+                            <Link href='/services/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
                             <p>Services</p>
                             </Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                            <Link href='/projects/'>
+                            <Link href='/projects/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
                             <p>Projets</p>
                             </Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden group mt-1.5'>
-                            <Link href='/team/'>
+                            <Link href='/team/' onClick={() => {setMenu(false);unlock();setHamburger(false)}}>
                             <p>Equipe</p>
                             </Link>
                         </li>
