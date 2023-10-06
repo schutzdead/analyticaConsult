@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../../../public/assets/header/logo.png'
+import WhiteLogo from '../../../public/assets/header/whiteLogo.png'
 // import Menu from '../../../public/assets/header/menu.svg'
-import { Hamburger } from './menu'
+import { Hamburger, BlackHamburger } from './menu'
 import { lock, unlock } from '@/utils/lockScreen'
 import { useState } from 'react'
 import Menu from './menu'
@@ -19,13 +20,19 @@ export default function Header ({isIntersecting}) {
       <header className='z-20 h-24 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-[background-color] duration-300 lg:px-10 sm:h-24 md:px-5'
               style={isIntersecting ? {backgroundColor:'white', color:'black', borderBottom:'solid 1px rgb(209,213,219)'} : {backgroundColor:'transparent'}}>
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
-            <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
+            {isIntersecting 
+            ? <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
+            : <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
+            }
           </div>
           <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
-            <Image src={Logo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
+            {isIntersecting 
+              ? <Image src={Logo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
+              : <Image src={WhiteLogo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
+            }
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>
-            <ul className='flex gap-10 font-semibold tracking-wider font-Helvetica lg:gap-5'>
+            <ul className='flex gap-10 font-medium tracking-wider font-Helvetica lg:gap-5'>
               <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
                 <Link href='/services/'>
                   <p>Services</p>

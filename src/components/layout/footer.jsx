@@ -12,12 +12,12 @@ export default function Footer () {
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Navigation</h3>
                     <div className='flex flex-col gap-2 lg:text-sm sm:flex-row sm:gap-5'>
                         <Link href={'/services'}>Services</Link>
-                        <a href={'/projects'}>Projets</a>
-                        <a href="">Mention légales</a>
+                        <Link href={'/projects'}>Projets</Link>
+                        <Link href={'/team/'}>Equipe</Link>
                     </div>
                 </div>
                 <div>
-                    <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Contact</h3>
+                    <Link href={'/contact/'}><p className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Contact</p></Link>
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
                         <p>bastien.dubuisson.histoire@gmail.com</p>
                         <p>+352606060606</p>

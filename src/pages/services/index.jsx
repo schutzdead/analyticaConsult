@@ -76,7 +76,7 @@ export default function Services() {
                     <Image src={services[0].picture} className='max-h-[350px] object-cover rounded-3xl' width={1500} height={2250} alt='Services picture' priority/>
                     <div className='w-full text-black mb-10'>
                         {services? 
-                            services.map(service => <ServiceReponsive key={service.id} service={service}/>)
+                            services?.slice(1,services.length).map(service => <ServiceReponsive key={service.id} service={service}/>)
                         :''
                         }
                     </div>
