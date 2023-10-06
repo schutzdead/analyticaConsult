@@ -20,7 +20,7 @@ export default function HeaderTeam () {
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden z-40 md:block md:mt-5'>
             <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
-          <Link href='/' className='flex items-center justify-center gap-2 h-full w-full  font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+          <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:w-full md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
             <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>

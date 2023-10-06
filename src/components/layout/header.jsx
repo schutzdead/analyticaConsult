@@ -25,7 +25,7 @@ export default function Header ({isIntersecting}) {
             : <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
             }
           </div>
-          <Link href='/' className='flex items-center justify-center h-full w-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+          <Link href='/' className='flex items-center justify-center h-full font-bold md:w-full md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
             {isIntersecting 
               ? <Image src={Logo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
               : <Image src={WhiteLogo} className='h-1/2 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
