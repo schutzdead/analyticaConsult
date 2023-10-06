@@ -1,39 +1,36 @@
 import Image from 'next/image'
 import ProjectAll from '../../../public/assets/services/service2.webp'
-import Project from '../../../public/assets/projects/project1.webp'
+import Project1 from '../../../public/assets/projects/project1.webp'
 import Arrow from '../../../public/assets/projects/arrow.svg'
 import Layout from '@/components/layout/layout'
 import ProjectModal from '@/components/projects/modal'
 import { useState } from 'react'
+import { lock } from '@/utils/lockScreen'
 
-export default function Services() {
+export default function Projects() {
     const [modal, setModal] = useState(false)
-
     return (
         <>
             <Layout>
                 <main className='flex flex-col mx-20 items-center flex-1 md:mx-8'>
-                    <section className='mt-16 mb-10 mx-20 max-w-[1600px] w-full md:mx-8 md:mb-8' onClick={() => setModal(true)}>
-                        <MainCard />
+                    <section className='mt-16 mb-10 mx-20 max-w-[1600px] w-full md:mx-8 md:mb-8'>
+                        <MainCard setModal={setModal} />
                     </section>
                     <section className='grid grid-cols-3 gap-10 mx-20 mt-10 mb-20 max-w-[1600px] w-full lg:grid-cols-2 md:grid-cols-1 md:mx-8 md:gap-8 md:mt-8'>
-                        <Card />
-                        <Card />
-                        <Card />
+                        <Card setModal={setModal} />
+                        <Card setModal={setModal} />
+                        <Card setModal={setModal} />
                     </section>
                 </main>
             </Layout>
-            {/* {modal 
-                ? <ProjectModal setModal={setModal} />
-                : ''
-            } */}
+            <ProjectModal modal={modal} setModal={setModal} />
         </>
     )
 }
 
-function Card () {
+function Card ({setModal}) {
     return (
-        <div className='group group/buttonBis relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden xl:h-[350px]'>
+        <div className='group group/buttonBis relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden xl:h-[350px]' onClick={() => {setModal(true); lock()}}>
             <Image src={ProjectAll} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={667} height={1000} alt='Services picture' priority/>
             <h1 className='text-3xl text-white w-full font-bold absolute top-1/2 text-center z-10 -translate-y-1/2 xl:text-2xl'>Le Nouvel Horizon</h1>
             <div className='h-full w-full absolute top-0 bg-black/25'>
@@ -53,10 +50,10 @@ function Card () {
     )
 }
 
-function MainCard () {
+function MainCard ({setModal}) {
     return (
-        <div className='relative h-[600px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis xl:h-[450px]'>
-            <Image src={Project} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' priority/>
+        <div className='relative h-[600px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis xl:h-[450px]' onClick={() => {setModal(true); lock()}}>
+            <Image src={Project1} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' priority/>
             <div className='h-full w-full absolute top-0' style={{background: 'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%)'}}></div>
                 <div className='w-full h-heightforCard absolute flex items-end pb-10 top-0 overflow-hidden md:h-full'>
                     <div className='bg-white cursor-pointer group/button px-5 z-10 absolute overflow-hidden transition-all duration-700 bottom-0 left-1/2 -translate-x-1/2 flex items-center rounded-2xl translate-y-full group-hover/buttonBis:translate-y-0 md:-translate-y-0 md:w-[90%] md:relative md:justify-between'>

@@ -45,19 +45,17 @@ export default function Home() {
           <section className='h-[100vh] -mt-24 overflow-hidden lg:flex lg:justify-center sm:-mt-24'>
             <Image src={Swipe4} className='w-full h-full object-cover' alt='Landscape' priority={true}/>
             <div className='w-full h-full bg-black/30 absolute top-0'></div>
-            <p className='absolute top-1/3 text-white font-bold text-7xl w-3/4 leading-snug tracking-wide ml-[20vw] xl:text-6xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl' >LOREM IPSUM DOOS<br/><span className='text-white'>DOLOR SIT</span></p>
+            <p className='absolute top-1/3 text-white font-bold text-9xl w-3/4 tracking-wide ml-[20vw] xl:text-6xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl' >votre Histoire,<br/><span className='text-white text-6xl font-normal'>{`SOURCE D'INSPIRATION`}</span></p>
           </section>
-          <section className='py-24 w-full flex justify-center gap-16 lg:items-center lg:gap-8 sm:flex-col sm:py-12 sm:gap-12'>
-            <div className='w-1/3 max-w-[400px] h-auto lg:w-[40%] md:w-[45%] sm:w-[45%] 2sm:w-[60%]'>
+          <section className='py-24 w-full flex justify-center gap-16 lg:items-center lg:gap-8 md:flex-col md:py-12 md:gap-12'>
+            <div className=' max-w-[400px] h-auto lg:w-[40%] md:w-[40%] 2sm:w-[60%]'>
               <Image src={Profil} className='shadow-[0_25px_65px_rgba(0,0,0,0.4)] object-cover rounded-xl cursor-pointer relative 2sm:h-[45%]' alt='Profil'/>
             </div>
-            <div className='w-1/3 max-w-[500px] gap-5 flex flex-col py-20 lg:py-0 lg:w-[40%] md:w-[45%] sm:w-[90%]'>
-              <p className='text-primary text-xl lg:text-lg'>Votre histoire entre de bonnes mains</p>
-              <div>
-                <h1 className='text-4xl font-bold lg:text-2xl'>Lorem ipsum dolor</h1>
-                <p className='text-sm lg:text-xs'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, asperiores.</p>
-              </div>
-              <p className='leading-7 text-lg lg:text-base'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere iusto sit a reiciendis ab laborum? Voluptates labore dolorum illum ducimus iste perferendis, ipsa officia sed libero saepe, omnis pariatur eaque praesentium, ad inventore! Nemo minima quis repellat culpa, accusamus laboriosam molestias facilis animi eaque. Nisi quaerat inventore harum aliquid eligendi.</p>
+            <div className='max-w-[400px] gap-5 flex flex-col py-20 lg:py-0 lg:w-[40%] md:w-[80%] md:max-w-none'>
+              <p className='text-primary text-xl lg:text-lg'>Confiez votre passé à notre expertise</p>
+              <h1 className='text-4xl font-bold lg:text-2xl'>Histoire Consult</h1>
+              <p className='leading-7 text-lg text-justify lg:text-base'>{`Histoire Consult propose une large gamme de solutions sur mesure aux entreprises, aux institutions publiques et privées ainsi qu'aux particuliers. Qu'il s'agisse de constituer vos archives, d'établir un storytelling fidèle à votre histoire, de vous assister dans l'organisation d'une conférence ou d'une exposition ou de vous conseiller en matière d'histoire, d'art et d'archéologie, nous vous accompagnons dans toutes vos démarches et vous aidons à faire de votre passé un atout.`}</p>
+              <p className='text-sm lg:text-xs'>Implantés au Luxembourg, en France et en Belgique, nos collaborateurs interviennent partout ailleurs sur demande.</p>
             </div>
           </section>
           <section className='py-16 flex justify-around bg-[#f6f0ea] sm:grid sm:grid-cols-2 sm:gap-y-10 sm:px-10 2sm:px-0'>
