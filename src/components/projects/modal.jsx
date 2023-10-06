@@ -5,17 +5,9 @@ import RightArrow from '../../../public/assets/projects/rightSide.svg'
 import { unlock } from '@/utils/lockScreen'
 import { useEffect, useState } from 'react'
 
-export default function ProjectModal ({setModal, modal}) {
-
-    const [position, setPosition] = useState(0)
-    useEffect(() => {
-        setPosition(document?.documentElement.scrollTop)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [document?.documentElement.scrollTop])
-
-    console.log(position);
+export default function ProjectModal ({setModal, modal, position}) {    
     return (
-        <div className={`w-[100vw] h-[100vh] bg-black/90 absolute flex-col items-center text-white z-50`}
+        <div className={`w-[100vw] h-[100vh] bg-black/90 absolute flex-col items-center top-0 text-white z-50`}
              style={modal ? {display:'flex', top:`${position}px`} : {display:'none'}}>
             <section className='flex h-[15%] items-center px-20 self-start sm:px-5'>
                 <div className="flex text-sm font-light pr-3 cursor-pointer items-center bg-primary rounded py-1 sm:text-xs sm:py-[2px] sm:pr-1.5" onClick={() => {setModal(false);unlock()}}>

@@ -19,16 +19,16 @@ export default function Header ({isIntersecting}) {
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
       <header className='z-20 h-24 flex justify-between px-[8vw] items-start sticky top-0 text-white transition-[background-color] duration-300 lg:px-10 sm:h-24 md:px-5'
               style={isIntersecting ? {backgroundColor:'white', color:'black', borderBottom:'solid 1px rgb(209,213,219)'} : {backgroundColor:'transparent'}}>
-          <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
+          <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden z-40 md:block md:mt-5'>
             {isIntersecting 
             ? <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
             : <Hamburger hamburger={hamburger} setHamburger={setHamburger}/>
             }
           </div>
-          <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+          <Link href='/' className='flex items-center justify-center h-full w-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
             {isIntersecting 
               ? <Image src={Logo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
-              : <Image src={WhiteLogo} className='h-1/2 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
+              : <Image src={WhiteLogo} className='h-1/2 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
             }
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>

@@ -17,11 +17,11 @@ export default function Headerlayout () {
     <>
       <Menu menu={menu} setMenu={setMenu} setHamburger={setHamburger}/>
       <header className='z-20 h-20 flex justify-between px-[8vw] items-start sticky top-0 border-b border-gray-300 text-red bg-white transition-all duration-300 lg:px-10 md:px-5 sm:h-24'>
-          <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden md:block md:mt-5'>
+          <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden z-40 md:block md:mt-5'>
             <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
-          <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
-            <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12' alt='Logo' priority={true}/>
+          <Link href='/' className='flex items-center justify-center gap-2 h-full w-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+            <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>
             <ul className='flex gap-10 tracking-wider font-Helvetica lg:gap-5'>

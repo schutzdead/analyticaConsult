@@ -45,7 +45,7 @@ export default function Home() {
           <section className='h-[100vh] -mt-24 overflow-hidden lg:flex lg:justify-center sm:-mt-24'>
             <Image src={Swipe4} className='w-full h-full object-cover' alt='Landscape' priority={true}/>
             <div className='w-full h-full bg-black/30 absolute top-0'></div>
-            <p className='absolute top-1/3 text-white font-bold text-9xl w-3/4 tracking-wide ml-[20vw] xl:text-6xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl' >votre Histoire,<br/><span className='text-white text-6xl font-normal'>{`SOURCE D'INSPIRATION`}</span></p>
+            <p className='absolute top-1/3 text-white font-bold text-9xl w-3/4 tracking-wide ml-[20vw] xl:text-6xl xl:top-1/2 xl:-translate-y-1/2 xl:leading-normal lg:ml-0 lg:text-center md:text-4xl sm:w-[90%]' >votre Histoire,<br/><span className='text-white text-6xl font-normal md:text-2xl'>{`SOURCE D'INSPIRATION`}</span></p>
           </section>
           <section className='py-24 w-full flex justify-center gap-16 lg:items-center lg:gap-8 md:flex-col md:py-12 md:gap-12'>
             <div className=' max-w-[400px] h-auto lg:w-[40%] md:w-[40%] 2sm:w-[60%]'>

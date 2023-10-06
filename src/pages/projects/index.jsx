@@ -9,28 +9,30 @@ import { lock } from '@/utils/lockScreen'
 
 export default function Projects() {
     const [modal, setModal] = useState(false)
+    const [position, setPosition] = useState(0)
     return (
         <>
             <Layout>
                 <main className='flex flex-col mx-20 items-center flex-1 md:mx-8'>
                     <section className='mt-16 mb-10 mx-20 max-w-[1600px] w-full md:mx-8 md:mb-8'>
-                        <MainCard setModal={setModal} />
+                        <MainCard setModal={setModal} setPosition={setPosition}/>
                     </section>
                     <section className='grid grid-cols-3 gap-10 mx-20 mt-10 mb-20 max-w-[1600px] w-full lg:grid-cols-2 md:grid-cols-1 md:mx-8 md:gap-8 md:mt-8'>
-                        <Card setModal={setModal} />
-                        <Card setModal={setModal} />
-                        <Card setModal={setModal} />
+                        <Card setModal={setModal} setPosition={setPosition}/>
+                        <Card setModal={setModal} setPosition={setPosition}/>
+                        <Card setModal={setModal} setPosition={setPosition}/>
                     </section>
                 </main>
             </Layout>
-            <ProjectModal modal={modal} setModal={setModal} />
+            <ProjectModal modal={modal} setModal={setModal} position={position} />
         </>
     )
 }
 
-function Card ({setModal}) {
+function Card ({setModal, setPosition}) {
+
     return (
-        <div className='group group/buttonBis relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden xl:h-[350px]' onClick={() => {setModal(true); lock()}}>
+        <div className='group group/buttonBis relative h-[450px] w-full bg-gray-100 rounded-md overflow-hidden xl:h-[350px]' onClick={() => {setModal(true); lock(); setPosition(document?.documentElement?.scrollTop)}}>
             <Image src={ProjectAll} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={667} height={1000} alt='Services picture' priority/>
             <h1 className='text-3xl text-white w-full font-bold absolute top-1/2 text-center z-10 -translate-y-1/2 xl:text-2xl'>Le Nouvel Horizon</h1>
             <div className='h-full w-full absolute top-0 bg-black/25'>
@@ -50,9 +52,9 @@ function Card ({setModal}) {
     )
 }
 
-function MainCard ({setModal}) {
+function MainCard ({setModal, setPosition}) {
     return (
-        <div className='relative h-[600px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis xl:h-[450px]' onClick={() => {setModal(true); lock()}}>
+        <div className='relative h-[600px] w-full bg-gray-100 rounded-md overflow-hidden group group/buttonBis xl:h-[450px]' onClick={() => {setModal(true); lock(); setPosition(document?.documentElement?.scrollTop)}}>
             <Image src={Project1} className='w-full h-full object-cover rounded-md group-hover:scale-[1.25] transition-all duration-500' width={1900} height={1266} alt='Services picture' priority/>
             <div className='h-full w-full absolute top-0' style={{background: 'radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%)'}}></div>
                 <div className='w-full h-heightforCard absolute flex items-end pb-10 top-0 overflow-hidden md:h-full'>
