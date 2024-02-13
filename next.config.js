@@ -3,4 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production'
+
+module.exports = {
+  trailingSlash: true,
+  assetPrefix: isProd ? 'https://histhorizons.fr' : undefined,
+  images: {
+    unoptimized: true,
+  },
+}

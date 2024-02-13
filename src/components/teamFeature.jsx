@@ -1,11 +1,8 @@
 import Image from 'next/image'
-import Facebook from '../../../public/assets/footer/facebook.svg'
-import Glass from '../../../public/assets/team/glass.svg'
-import Instagram from '../../../public/assets/footer/instagram.svg'
-import Linkedin from '../../../public/assets/footer/linkedin.svg'
-import HeaderTeam from '@/components/layout/headerTeam'
+import Glass from '../../public/assets/team/glass.svg'
+import Linkedin from '../../public/assets/footer/linkedin.svg'
 import Link from 'next/link'
-import { team } from '../../../public/teamData'
+import { team } from '../../public/teamData'
 import SideMenu from '@/components/team/sideMenu'
 import { lock } from '@/utils/lockScreen'
 
@@ -17,6 +14,13 @@ export default function Team() {
     const [bag, setBag] = useState(false)
     const [currentId, setCurrentId] = useState()
     const swiperRef = useRef(null);  
+    const [position, setPosition] = useState()
+    const [body, setBody] = useState()
+
+    useEffect(() => {
+        setBody(document?.querySelector('body'))
+    },[])
+
     useEffect(() => {
       const swiperContainer = swiperRef.current;
       Object.assign(swiperContainer, swiperParams);
@@ -24,14 +28,13 @@ export default function Team() {
     }, []);
 
     return (
-        <div className='bg-[#e7dfdb] flex flex-col justify-center'>
-            < HeaderTeam />
-            <SideMenu bag={bag} setBag={setBag} id={currentId-1} />
-            <main className='w-[100vw] mt-[14vh] bg-[#e7dfdb] flex justify-center items-center md:mt-[5vh] pb-[5vh]'>
+        <div id='teamId' className='bg-white flex flex-col justify-center'>
+            <SideMenu bag={bag} setBag={setBag} id={currentId-1} position={position} />
+            <main className='w-[100vw] mt-44 bg-[#e7dfdb]/40 flex justify-center items-center py-5 md:mt-20'>
                 <swiper-container ref={swiperRef} init="false" class='h-full w-full mx-10 flex items-center sm:mx-5'>
                     {
                         team ?
-                        team.map(t => <ProfilTeam key={t.id} data={t} setBag={setBag} setCurrentId={setCurrentId} />)
+                        team.map(t => <ProfilTeam key={t.id} data={t} setBag={setBag} setCurrentId={setCurrentId} setPosition={setPosition} position={position} body={body} />)
                         : 'Equipe en cours de constitution.'
                     }
                 </swiper-container>
@@ -40,7 +43,7 @@ export default function Team() {
     )
 }
 
-function ProfilTeam ({data, setBag, setCurrentId}) {
+function ProfilTeam ({data, setBag, setCurrentId, setPosition, body}) {
     return(
         <swiper-slide class='flex items-center justify-center'>
             <div className='grid grid-cols-3 items-center justify-items-center max-w-[1600px] w-full xl:grid-cols-2 md:flex md:flex-col-reverse md:gap-7'>
@@ -48,7 +51,7 @@ function ProfilTeam ({data, setBag, setCurrentId}) {
                     <h1 className='text-4xl whitespace-nowrap lg:text-3xl'>{data.fullname.toUpperCase()}</h1>
                     <p className='text-sm text-primary font-normal lg:text-xs'>{data.title1.toUpperCase()}</p>
                     <p className='text-sm mt-3 lg:text-xs'>{data.title2.toUpperCase()}</p>
-                    <button className='py-1.5 mt-10 px-4 border border-primary items-center gap-2 place-self-center rounded-3xl transition-all duration-300 hidden xl:flex hover:bg-primary hover:text-white lg:px-2 md:mt-5' onClick={() => {setBag(true), lock(), setCurrentId(data.id)}}>
+                    <button className='py-1.5 mt-10 px-4 border border-primary items-center gap-2 place-self-center rounded-3xl transition-all duration-300 hidden xl:flex hover:bg-primary hover:text-white lg:px-2 md:mt-5' onClick={() => {setBag(true); setPosition(Math.max(window.screenY, document.documentElement.scrollTop, document.body.scrollTop)); body.style.overflow = 'hidden'; setCurrentId(data.id)}}>
                         <Image className="w-6 h-auto lg:w-5" src={Glass} alt="Pictogram glass"/>
                         <p className='mt-1 lg:text-sm lg:mt-0'>Informations</p>
                     </button>
@@ -58,19 +61,13 @@ function ProfilTeam ({data, setBag, setCurrentId}) {
                     <p className='flex items-center h-full xl:hidden'>{data.content}</p>
                     <div className='text-end flex flex-col items-end gap-1 xl:hidden'>
                         <div className='flex gap-2 md:justify-center'>
-                            <Link href={data.facebook} target={"_blank"}>
-                                <Image className="w-6 h-auto" src={Facebook} alt="Pictogram Facebook"/>
-                            </Link>
-                            <Link href={data.instagram} target={"_blank"}>
-                                <Image className="w-6 h-auto" src={Instagram} alt="Pictogram Instagram"/>
-                            </Link>
                             <Link href={data.linkedin} target={"_blank"}>
                                 <Image className="w-6 h-auto" src={Linkedin} alt="Pictogram Linkedin"/>
                             </Link>
                         </div>
                         <div className='flex flex-col text-xs'>
-                            <span class="swiper-no-swiping">{data.phone}</span>
-                            <span class="swiper-no-swiping">{data.email}</span>
+                            <span>{data.phone}</span>
+                            <span>{data.email}</span>
                         </div>
                     </div>
                 </div>
@@ -83,7 +80,7 @@ const swiperParams = {
     navigation:true,
     slidesPerView: 1,
     mousewheel:true,
-    speed: 1500,
+    speed: 1000,
     injectStyles: [
         `
         .swiper-button-next,

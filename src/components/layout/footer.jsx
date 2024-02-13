@@ -11,31 +11,23 @@ export default function Footer () {
                 <div>
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Navigation</h3>
                     <div className='flex flex-col gap-2 lg:text-sm sm:flex-row sm:gap-5'>
-                        <Link href={'/services'}>Services</Link>
-                        <Link href={'/projects'}>Projets</Link>
-                        <Link href={'/team/'}>Equipe</Link>
+                        <Link href={'/#services'}>Services</Link>
+                        <Link href={'/#teamId'}>Equipe</Link>
+                        <Link href={'/cgv'}>CGV</Link>
                     </div>
                 </div>
                 <div>
-                    <Link href={'/contact/'}><p className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Contact</p></Link>
+                    <Link href={'#contact'}><p className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>Contact</p></Link>
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
-                        <p>bastien.dubuisson.histoire@gmail.com</p>
-                        <p>+352606060606</p>
+                        <p>contact@histhorizons.fr</p>
                         <p>France - Luxembourg</p>
                     </div>
                 </div>
                 <div>
                     <h3 className='text-h4R font-semibold mb-2.5 sm:text-center sm:text-base'>En savoir plus</h3>
                     <div className='flex flex-col gap-2 lg:text-sm sm:text-center'>
-                        <p>Bastien Dubuisson, PhD</p>
                         <div className='flex gap-3 md:justify-center'>
-                            <Link href="https://www.facebook.com/histoire.consult/" target={"_blank"}>
-                                <Image src={Facebook} alt="Pictogram Facebook"/>
-                            </Link>
-                            <Link href="https://www.instagram.com/histoireconsult/" target={"_blank"}>
-                                <Image src={Instagram} alt="Pictogram Instagram"/>
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/bastien-dubuisson/" target={"_blank"}>
+                            <Link href="https://www.linkedin.com/company/histhorizons/" target={"_blank"}>
                                 <Image src={Linkedin} alt="Pictogram Linkedin"/>
                             </Link>
                         </div>

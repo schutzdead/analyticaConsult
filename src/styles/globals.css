@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bodoni+Moda&family=Cormorant+Infant:wght@300&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +12,7 @@
     background-color:theme('backgroundColor.white');
     @apply overflow-x-hidden;
     @apply no-scrollbar;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -23,4 +26,10 @@
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
   }
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('../../public/font/BigCaslonMedium.ttf');
+  font-style: normal;
 }

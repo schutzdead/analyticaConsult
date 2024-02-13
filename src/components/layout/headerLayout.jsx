@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../../../public/assets/header/logo.png'
-// import Menu from '../../../public/assets/header/menu.svg'
+import Logo from '../../../public/assets/header/logo2.webp'
 import { lock, unlock } from '@/utils/lockScreen'
 import { useState } from 'react'
 import Menu from './menu'
 import { BlackHamburger } from './menu'
-
 
 export default function Headerlayout () {
   
@@ -20,30 +18,30 @@ export default function Headerlayout () {
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden z-40 md:block md:mt-5'>
             <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
-          <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:w-full md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
-            <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
+          <Link href='/' className='flex items-center justify-center h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+            <Image src={Logo} className='touch-none h-1/2 max-h-[45px] w-auto cursor-pointer relative md:h-auto' alt='Logo' priority/>
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>
             <ul className='flex gap-10 tracking-wider font-Helvetica lg:gap-5'>
               <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                <Link href='/services/'>
+                <Link href='/#services'>
                   <p>Services</p>
                   <UnderlineHover />
                 </Link>
               </li>
               <li className='cursor-pointer relative overflow-hidden mt-1.5 group'>
-                <Link href='/projects/'>
+                <Link href='/#projects'>
                   <p>Projets</p>
                   <UnderlineHover />
                 </Link>
               </li>
               <li className='cursor-pointer relative overflow-hidden group mt-1.5 mr-[95px]'>
-                <Link href='/team/'>
+                <Link href='/#teamId'>
                   <p>Equipe</p>
                   <UnderlineHover />
                 </Link>
               </li>
-              <Link href='/contact/'>
+              <Link href='/#contact'>
                 <li className='group w-[85px] flex items-center justify-center absolute text-primary right-0'>
                   <button className='z-10 py-1.5 rounded w-full border border-primary/40 bg-white transition-all duration-500 relative bottom-1 right-1 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
                   <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>

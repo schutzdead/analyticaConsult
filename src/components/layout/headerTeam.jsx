@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../../../public/assets/header/logo.png'
-// import Menu from '../../../public/assets/header/menu.svg'
+import Logo from '../../../public/assets/header/logo2.webp'
 import { lock, unlock } from '@/utils/lockScreen'
 import { useState } from 'react'
 import Menu from './menu'
@@ -20,8 +19,8 @@ export default function HeaderTeam () {
           <div onClick={() => {setMenu(!menu); menu ? unlock() : lock()}} className='hidden z-40 md:block md:mt-5'>
             <BlackHamburger hamburger={hamburger} setHamburger={setHamburger}/>
           </div>
-          <Link href='/' className='flex items-center justify-center gap-2 h-full font-bold md:w-full md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
-            <Image src={Logo} className='h-10 w-auto cursor-pointer relative md:h-12 2sm:h-10' alt='Logo' priority={true}/>
+          <Link href='/' className='flex items-center justify-center h-full font-bold md:absolute md:left-1/2 md:-translate-x-1/2 sm:flex-col sm:gap-0'>
+            <Image src={Logo} className='touch-none h-1/2 max-h-[45px] w-auto cursor-pointer relative md:h-auto' alt='Logo' priority={true}/>
           </Link>
           <nav className='flex items-center h-full relative md:hidden'>
             <ul className='flex gap-10 tracking-wider font-Helvetica lg:gap-5'>

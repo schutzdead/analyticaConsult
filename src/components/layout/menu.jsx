@@ -15,20 +15,20 @@ export default function Menu ({menu, setMenu , setHamburger}) {
                 <Image src={Close} onClick={() => {setMenu(false);unlock();setHamburger(false)}} alt="Close pictogram" className='w-8 cursor-pointer self-start'/>
                 <div className="flex justify-center">
                     <ul className="relative flex flex-col items-center text-2xl tracking-wide w-full gap-6">
-                        <li className='cursor-pointer relative overflow-hidden mt-5 group' onClick={closeBurger}>
+                        {/* <li className='cursor-pointer relative overflow-hidden mt-5 group' onClick={closeBurger}>
                             <Link href='/'>Accueil</Link>
+                        </li> */}
+                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group' onClick={closeBurger}>
+                            <Link href='/#services'>Services</Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden mt-1.5 group' onClick={closeBurger}>
-                            <Link href='/services/'>Services</Link>
-                        </li>
-                        <li className='cursor-pointer relative overflow-hidden mt-1.5 group' onClick={closeBurger}>
-                            <Link href='/projects/'>Projets</Link>
+                            <Link href='/#projects'>Projets</Link>
                         </li>
                         <li className='cursor-pointer relative overflow-hidden group mt-1.5' onClick={closeBurger}>
-                            <Link href='/team/'>Equipe</Link>
+                            <Link href='/#teamId'>Equipe</Link>
                         </li>
                         <li onClick={closeBurger}>
-                            <Link href='/contact/'>
+                            <Link href='/#contact'>
                                 <div className='group w-[145px] flex items-center justify-center relative text-primary pt-3'>
                                     <button className='z-10 py-1.5 rounded w-full border border-primary bg-white transition-all duration-500 relative bottom-1.5 right-1.5 group-hover:border-third group-hover:bg-white group-hover:text-third group-hover:bottom-0 group-hover:right-0'>Contact</button>
                                     <div className='text-transparent bg-primary/80 py-1.5 w-full absolute rounded'>Contact</div>

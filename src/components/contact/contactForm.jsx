@@ -1,8 +1,8 @@
 import { Controller } from "react-hook-form";
 import { useForm } from "react-hook-form";
-import { object, string, ref } from "yup";
+import { object, string } from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
-import { TextField, Button, ThemeProvider } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useState } from "react";
 
 import { Loading } from "../loader";
@@ -28,9 +28,9 @@ export function ContactForm () {
         const { name, email, message } = data
         setLoading(true)
         try {
-            const response = await fetch('/api/proxy/contact', {
+            const response = await fetch('https://api.histoireconsult.fr/api/contact', {
                 method: "POST",    
-                credentials: 'include', 
+                // credentials: 'include', 
                 mode: "cors",
                 headers: {
                     "Accept": "application/json",
@@ -109,8 +109,8 @@ export function ContactForm () {
                                         />
                                     )}
                     />
-                    <p className='text-xs font-light col-span-2'>En envoyant ce mail, vous agréez à la <span className='font-bold'>politiques de la protection des données*</span>.</p>
-                    <button type="submit" className="bg-primary/70 text-white col-span-2 py-2 w-[300px] place-self-center mt-5 rounded-md">ENVOYER</button>
+                    <p className='text-xs font-light col-span-2'>En envoyant ce mail, vous agréez à la <span className='font-bold'>politique de la protection des données*</span>.</p>
+                    <button type="submit" className="bg-primary/70 text-white col-span-2 py-2 w-[300px] place-self-center mt-5 rounded-md transition-all duration-500 hover:bg-primary">ENVOYER</button>
             </form>
         }
         </>
@@ -121,17 +121,17 @@ export function ContactForm () {
 function MailSend ({setMailSend, setlogErr}) {
     return(
         <div className="w-[100vw] h-[100vh] flex bg-black/60 items-center justify-center overflow-hidden z-50 absolute top-0 left-0">
-            <div className="flex flex-col bg-white w-[400px] pt-2 pb-5 px-7 relative sm:w-[90%]">
+            <div className="flex flex-col bg-white w-[400px] pt-2 pb-5 px-7 relative sm:w-[90%] rounded-xl">
                 <Image src={Close} alt="Close pictogram" 
                         onClick={() => {setMailSend(false); setlogErr(false); unlock()}} 
                         className='self-end -mr-5 h-7 w-auto cursor-pointer' />
                 <>
-                    <div className="mt-3 mb-7 h-9 w-9 self-center flex items-center justify-center border-2 border-primary-color animate-[2s_forwards_rotation]">
+                    <div className="mt-3 mb-7 h-9 w-9 self-center flex items-center justify-center border-2 border-primary animate-[2s_forwards_rotation]">
                         <Image src={Check} alt="Validate pictogram" />
                     </div>
                     <div className="text-center flex flex-col mb-5 items-center gap-1">
-                        <p>Email envoyé.</p>
-                        <p>Nous avons bien reçu votre demande. Nous allons vous répondre dès que possible.</p>
+                        <p>Merci de votre message !</p>
+                        <p>{`L'équipe d'HistHorizons vous répondra au plus vite.`}</p>
                     </div>
                 </>
             </div>

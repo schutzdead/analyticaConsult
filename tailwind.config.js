@@ -19,12 +19,17 @@ module.exports = {
       '2sm': {'max': '430px'},
       'h2xl': {'raw': '(max-height: 1000px)'},
       'hxl': {'raw': '(max-height: 800px)'},
+      'hsm': {'raw': '(max-height: 640px)'},
     },
     extend: {
       animation: {
-        fromtoptotop:'fromtoptotop 1s ease-out forwards',
+        fromtoptotop:'fromtoptotop 500ms ease-out forwards',
       },
       keyframes: {
+        rotation: {
+          '0%':{ borderRadius: "0%", transform: "rotate(0deg)"},
+          '100%': { borderRadius: "50%", transform: "rotate(720deg)"},
+        },
         fromtoptotop: {
           '0%':{ top: "0%", opacity:1 },
           '25%':{ opacity:0 },
@@ -37,6 +42,9 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
+        'Barlow':['Barlow', ...defaultTheme.fontFamily.sans],
+        'Comorant': ['Cormorant Infant'],
+        'Caslon': ['Caslon'],
       },
       colors: {
         "primary": "#6a97f9",

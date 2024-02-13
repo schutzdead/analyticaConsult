@@ -4,6 +4,7 @@ export const unlock = () => {
     const body = document.querySelector('body');
     BSL.enableBodyScroll(body)
     body.style.overflow = 'auto'
+    body.style.overflowX = 'hidden'
 }
 
 export const lock = () => {
